@@ -1,0 +1,22 @@
+DJEMBAGAMES.COM — SİTE DOSYALARI
+
+index.html ......... ana sayfa
+tugtown.html ....... oyun sayfası
+CNAME .............. alan adı ayarı (dokunma, silme)
+assets/ ............ logolar, ikonlar, ekran görüntüleri
+
+DİL
+Her metnin Türkçesi ve İngilizcesi HTML'in içinde yan yana duruyor:
+  <p lang="tr">Türkçe metin</p>
+  <p lang="en">English text</p>
+Sağ üstteki TR/EN düğmesi hangisinin görüneceğine karar veriyor.
+Bir metni değiştireceksen İKİSİNİ birden değiştir.
+
+EKRAN GÖRÜNTÜLERİ
+assets/ klasöründeki tugtown-1.png ... tugtown-5.png şu an yer tutucu.
+Kendi ekran görüntülerini AYNI İSİMLERLE yükle, site otomatik günceller.
+HTML'e dokunmana gerek yok.
+
+OYUN YAYINLANDIĞINDA
+tugtown.html içinde "Yakında App Store'da / Coming soon" yazan satırı
+App Store bağlantısıyla değiştireceğiz. Bana haber ver, ben hazırlarım.

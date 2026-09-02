@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Djemba Games</title>
+<meta name="description" content="Zamanınıza saygılı oyunlar. A mobile game studio building calm puzzle games.">
+<meta property="og:title" content="Djemba Games">
+<meta property="og:description" content="Zamanınıza saygılı oyunlar. A mobile game studio building calm puzzle games.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://djembagames.com/">
+<meta property="og:image" content="https://djembagames.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/amblem-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ground:#FFF6EE; --paper:#FFFFFF; --ink:#1E2029; --body:#3A3540;
+  --muted:#7A6A63; --rule:#E8DACF; --rule-soft:#F2E8DF;
+  --coral:#FF6B54; --coral-soft:#FFE7E1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#14151A; --paper:#1B1D24; --ink:#FFF6EE; --body:#DCD2CC;
+    --muted:#9A8C86; --rule:#2C2F38; --rule-soft:#23262E;
+    --coral:#FF7C67; --coral-soft:#3A2320;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#14151A; --paper:#1B1D24; --ink:#FFF6EE; --body:#DCD2CC;
+  --muted:#9A8C86; --rule:#2C2F38; --rule-soft:#23262E;
+  --coral:#FF7C67; --coral-soft:#3A2320;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ground);color:var(--body);
+  font-family:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+
+/* --- dil --- */
+:root[data-lang="tr"] [lang="en"]{display:none}
+:root[data-lang="en"] [lang="tr"]{display:none}
+
+.wrap{max-width:940px;margin:0 auto;padding:0 1.5rem}
+a{color:inherit}
+
+/* --- başlık --- */
+header.top{border-bottom:1px solid var(--rule);background:var(--ground);
+  position:sticky;top:0;z-index:20}
+.topin{max-width:940px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;gap:1.2rem}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:30px;width:auto;display:block}
+nav{margin-left:auto;display:flex;align-items:center;gap:1.3rem}
+nav a{font-size:.92rem;font-weight:500;text-decoration:none;color:var(--body)}
+nav a:hover{color:var(--coral)}
+.lang{border:1px solid var(--rule);background:none;color:var(--muted);cursor:pointer;
+  font:inherit;font-size:.74rem;font-weight:700;letter-spacing:.1em;padding:.3rem .6rem;
+  border-radius:2px}
+.lang:hover{border-color:var(--coral);color:var(--coral)}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+@media(max-width:620px){nav a.hide-s{display:none}}
+
+/* --- tipografi --- */
+h1,h2,h3{font-family:"Fredoka",sans-serif;color:var(--ink);letter-spacing:-.02em;margin:0}
+h1{font-weight:600;font-size:clamp(2.4rem,7vw,3.9rem);line-height:1.03;text-wrap:balance}
+h2{font-weight:600;font-size:clamp(1.6rem,4vw,2.1rem);line-height:1.1}
+h3{font-weight:500;font-size:1.15rem}
+p{margin:0 0 1.1rem;max-width:60ch}
+p:last-child{margin-bottom:0}
+.dot{color:var(--coral)}
+
+/* --- hero --- */
+.hero{padding:5rem 0 4.5rem}
+.hero p.sub{font-size:1.18rem;margin-top:1.4rem;max-width:52ch}
+.hero .kicker{font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--coral);margin:0 0 1.3rem}
+
+section.blk{padding:3.6rem 0;border-top:1px solid var(--rule)}
+.shead{margin-bottom:1.8rem}
+
+/* --- oyun kartı --- */
+.game{display:grid;grid-template-columns:150px 1fr;gap:1.8rem;align-items:center;
+  background:var(--paper);border:1px solid var(--rule);padding:1.7rem;text-decoration:none}
+.game:hover{border-color:var(--coral)}
+.game .art{aspect-ratio:1;border-radius:26%;background:#1E2029;display:flex;
+  align-items:center;justify-content:center;overflow:hidden}
+.game .art img{width:100%}
+.game h3{margin-bottom:.3rem}
+.game p{font-size:.97rem;margin:0}
+.badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--coral);border:1px solid var(--coral);
+  padding:.16rem .5rem;margin-top:.8rem}
+@media(max-width:560px){.game{grid-template-columns:1fr;text-align:left}
+  .game .art{width:110px}}
+
+.cols3{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin-top:2rem}
+.cols3 > div{background:var(--paper);padding:1.4rem 1.4rem 1.5rem}
+.cols3 h3{font-size:1rem;margin-bottom:.45rem}
+.cols3 p{font-size:.92rem;color:var(--muted);margin:0}
+
+/* --- iletişim --- */
+.mail{font-family:"Fredoka",sans-serif;font-weight:500;font-size:clamp(1.4rem,4.5vw,2rem);
+  color:var(--ink);text-decoration:none;border-bottom:3px solid var(--coral);
+  display:inline-block;line-height:1.15}
+.mail:hover{color:var(--coral)}
+
+/* --- oyun sayfası --- */
+.gamehero{padding:4.2rem 0 3rem}
+.status{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:600;
+  color:var(--muted);margin-top:1.6rem}
+.status::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--coral)}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.1rem}
+.shots img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:18px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule)}
+.facts div{background:var(--paper);padding:1.2rem 1.3rem}
+.facts dt{font-family:"Fredoka",sans-serif;font-weight:500;color:var(--ink);font-size:1rem;
+  margin-bottom:.25rem}
+.facts dd{margin:0;font-size:.9rem;color:var(--muted);line-height:1.45}
+.back{display:inline-block;margin-top:2.4rem;font-size:.92rem;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--coral)}
+
+/* --- alt --- */
+footer{border-top:1px solid var(--rule);margin-top:4rem;background:var(--paper)}
+.footin{max-width:940px;margin:0 auto;padding:2.4rem 1.5rem;display:flex;gap:1.6rem;
+  align-items:center;flex-wrap:wrap}
+footer img{height:26px;width:auto;opacity:.9}
+.flinks{margin-left:auto;display:flex;gap:1.3rem;flex-wrap:wrap}
+footer a{font-size:.85rem;color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--coral)}
+.copy{font-size:.8rem;color:var(--muted);width:100%;margin:0}
+</style>
+</head>
+<body>
+<header class="top"><div class="topin">
+  <a class="brand" href="index.html"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/logo-yatay-koyu-zemin.svg"><img src="assets/logo-yatay.svg" alt="Djemba Games"></picture></a>
+  <nav>
+    <a href="index.html#oyunlar"><span lang="tr">Oyunlar</span><span lang="en">Games</span></a>
+    <a class="hide-s" href="index.html#studio"><span lang="tr">Stüdyo</span><span lang="en">Studio</span></a>
+    <a href="index.html#iletisim"><span lang="tr">İletişim</span><span lang="en">Contact</span></a>
+    <button class="lang" type="button">TR</button>
+  </nav>
+</div></header>
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <p class="kicker"><span lang="tr">Mobil oyun stüdyosu</span><span lang="en">Mobile game studio</span></p>
+      <h1 lang="tr">Zamanınıza saygılı<br>oyunlar<span class='dot'>.</span></h1>
+<h1 lang="en">Games that respect<br>your time<span class='dot'>.</span></h1>
+      <p lang="tr" class="sub">Djemba Games bir mobil oyun stüdyosudur. Sakin ve sade bulmaca oyunları geliştiriyoruz — sayaç yok, baskı yok, gürültü yok. Sadece iyi bir bulmaca ve onu çözmenin tatmini.</p>
+<p lang="en" class="sub">Djemba Games is a mobile game studio. We build calm, uncluttered puzzle games — no timers, no pressure, no noise. Just a good puzzle and the satisfaction of solving it.</p>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="blk" id="oyunlar">
+      <div class="shead"><h2 lang="tr">Oyunlar</h2>
+<h2 lang="en">Games</h2></div>
+      <a class="game" href="tugtown.html">
+        <div class="art"><img src="assets/tugtown-icon.png" alt=""></div>
+        <div>
+          <h3>Tugtown</h3>
+          <p lang="tr">Sakin bir liman bulmacası. Tekneler birbirinin önünü kesiyor; her bölüm tek bir soru soruyor: hangisi önce çıkacak?</p>
+<p lang="en">A calm harbour puzzle. Boats block boats, and every level asks one question: which one moves first?</p>
+          <span class="badge"><span lang="tr">Yakında · iOS</span><span lang="en">Coming soon · iOS</span></span>
+        </div>
+      </a>
+    </section>
+
+    <section class="blk" id="studio">
+      <div class="shead"><h2 lang="tr">Stüdyo</h2>
+<h2 lang="en">Studio</h2></div>
+      <p lang="tr">Djemba Games mobil bulmaca oyunları tasarlar ve yayınlar. Tasarım, kod, görsel ve ses stüdyo içinde üretilir; bir oyun, ana ekranda yer kaplamayı hak edene kadar test edilir.</p>
+<p lang="en">Djemba Games designs and publishes puzzle games for mobile. Design, code, art and sound are produced in-house, and a game is tested until it earns the space it takes on a home screen.</p>
+      <div class="cols3">
+        <div>
+          <h3 lang="tr">Önce tasarım</h3><h3 lang="en">Design first</h3>
+          <p lang="tr">Bir oyun, takvim öyle dediği için değil, iyi oynandığı için yayınlanır.</p>
+          <p lang="en">A game ships when it plays well, not when a calendar says it should.</p>
+        </div>
+        <div>
+          <h3 lang="tr">Tahmin değil, ölçüm</h3><h3 lang="en">Measured, not guessed</h3>
+          <p lang="tr">Her bölüm ve her oturum ölçülür. Zorluk eğrisi fikirlere göre değil, verilere göre ayarlanır.</p>
+          <p lang="en">Every level and every session is measured. Difficulty is tuned from data, not opinion.</p>
+        </div>
+        <div>
+          <h3 lang="tr">Oyuncuya saygı</h3><h3 lang="en">Respect for the player</h3>
+          <p lang="tr">Reklamlar oyunun ortasına değil, bölüm aralarına konur. Yapay aciliyet ve karanlık desen yok.</p>
+          <p lang="en">Ads run between levels, never in the middle of one. No manufactured urgency, no dark patterns.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="blk" id="iletisim">
+      <div class="shead"><h2 lang="tr">İletişim</h2>
+<h2 lang="en">Contact</h2></div>
+      <p lang="tr">Basın, iş birliği ve destek talepleri için:</p>
+<p lang="en">For press, partnerships and support:</p>
+      <p><a class="mail" href="mailto:info@djembagames.com">info@djembagames.com</a></p>
+    </section>
+  </div>
+</main>
+<footer><div class="footin">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/logo-yatay-koyu-zemin.svg"><img src="assets/logo-yatay.svg" alt="Djemba Games"></picture>
+  <div class="flinks">
+    <a href="mailto:info@djembagames.com">info@djembagames.com</a>
+    <a href="https://legal.djembagames.com/privacy/"><span lang="tr">Gizlilik Politikası</span><span lang="en">Privacy Policy</span></a>
+    <a href="https://legal.djembagames.com/terms/"><span lang="tr">Kullanım Şartları</span><span lang="en">Terms of Use</span></a>
+  </div>
+  <p class="copy">© 2026 Djemba Games. <span lang="tr">Tüm hakları saklıdır.</span><span lang="en">All rights reserved.</span></p>
+</div></footer>
+<script>
+(function(){
+  var r=document.documentElement, k="djemba-lang", v=null;
+  try{ v=localStorage.getItem(k); }catch(e){}
+  if(!v){ v=(navigator.language||"en").toLowerCase().indexOf("tr")===0?"tr":"en"; }
+  set(v);
+  function set(l){
+    r.setAttribute("data-lang",l); r.setAttribute("lang",l);
+    var bs=document.querySelectorAll(".lang"); for(var i=0;i<bs.length;i++){ bs[i].textContent = l==="tr" ? "EN" : "TR"; }
+    try{ localStorage.setItem(k,l); }catch(e){}
+  }
+  document.addEventListener("click",function(e){
+    var b=e.target.closest(".lang"); if(!b) return;
+    set(r.getAttribute("data-lang")==="tr"?"en":"tr");
+  });
+})();
+</script>
+</body>
+</html>
