@@ -15,7 +15,13 @@
 <link rel="apple-touch-icon" href="assets/amblem-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="preload" href="assets/fredoka-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+@font-face{font-family:"Fredoka";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fredoka-400.woff2") format("woff2")}
+@font-face{font-family:"Fredoka";font-style:normal;font-weight:500;font-display:swap;src:url("assets/fredoka-500.woff2") format("woff2")}
+@font-face{font-family:"Fredoka";font-style:normal;font-weight:600;font-display:swap;src:url("assets/fredoka-600.woff2") format("woff2")}
+</style>
 <style>
 :root{
   --ground:#FFF6EE; --paper:#FFFFFF; --ink:#1E2029; --body:#3A3540;
@@ -92,6 +98,7 @@ section.blk{padding:3.6rem 0;border-top:1px solid var(--rule)}
 .game .art img{width:100%}
 .game h3{margin-bottom:.3rem}
 .game p{font-size:.97rem;margin:0}
+.nocaps{text-transform:none;letter-spacing:.04em}
 .badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;color:var(--coral);border:1px solid var(--coral);
   padding:.16rem .5rem;margin-top:.8rem}
@@ -175,7 +182,7 @@ footer a:hover{color:var(--coral)}
           <h3>Tugtown</h3>
           <p lang="tr">Sakin bir liman bulmacası. Tekneler birbirinin önünü kesiyor; her bölüm tek bir soru soruyor: hangisi önce çıkacak?</p>
 <p lang="en">A calm harbour puzzle. Boats block boats, and every level asks one question: which one moves first?</p>
-          <span class="badge"><span lang="tr">Yakında · iOS</span><span lang="en">Coming soon · iOS</span></span>
+          <span class="badge"><span lang="tr">Yakında · <span class="nocaps">iOS</span></span><span lang="en">Coming soon · <span class="nocaps">iOS</span></span></span>
         </div>
       </a>
     </section>
